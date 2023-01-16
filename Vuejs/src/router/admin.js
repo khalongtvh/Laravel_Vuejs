@@ -14,6 +14,16 @@ const admin = [{
         name: "admin-products",
         component: () =>
             import ('../pages/admin/products/index.vue')
+    }, {
+        path: "roles",
+        name: "admin-roles",
+        component: () =>
+            import ('../pages/admin/roles/index.vue')
+    }, {
+        path: "settings",
+        name: "admin-settings",
+        component: () =>
+            import ('../pages/admin/settings/index.vue')
     }]
 }]
 
