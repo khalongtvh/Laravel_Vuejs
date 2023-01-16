@@ -23,9 +23,7 @@
         </div>
     </div>
     <a-drawer v-model:visible="visible_menu" title="Menu" placement="left">
-        <p>Menu 1...</p>
-        <p>Menu 2...</p>
-        <p>Menu 3...</p>
+        <Menu />
     </a-drawer>
     <a-drawer v-model:visible="visible_admin" title="Amin" placement="right">
         <p>Admin 1...</p>
@@ -36,7 +34,12 @@
 
 <script>
 import { defineComponent, ref } from 'vue';
+import Menu from '../components/Menu.vue'
+
 export default defineComponent({
+    components: {
+        Menu
+    },
     setup() {
         const visible_menu = ref(false);
         const visible_admin = ref(false);
