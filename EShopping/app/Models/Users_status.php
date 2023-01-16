@@ -10,4 +10,8 @@ class Users_status extends Model
     use HasFactory;
     protected $fillable = ['name'];
     protected $table = 'users_status';
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }
