@@ -11,7 +11,7 @@
                 </a-list>
             </div>
             <div class="col-sm-9">
-                CONTENT
+                <router-view></router-view>
             </div>
         </div>
     </div>
