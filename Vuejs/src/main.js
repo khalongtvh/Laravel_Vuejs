@@ -1,6 +1,9 @@
+import './style.css'
+import './static/fontawesome-free-6.2.1-web/css/all.min.css'
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import './style.css'
+
 import App from './App.vue'
 import router from './router/index.js'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'

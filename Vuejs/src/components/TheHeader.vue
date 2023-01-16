@@ -2,7 +2,7 @@
     <div class="container-fuild">
         <div class="row text-white" style="background-color: green; padding: 1rem">
             <div class="col-1 d-flex d-sm-none align-items-center justify-content-center">
-                <span @click="showMenu">X</span>
+                <span @click="showMenu"> <i class="fa-solid fa-align-justify"></i></span>
             </div>
             <div class="col-9 d-flex align-items-center justify-content-center justify-content-sm-start">
                 <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -18,7 +18,7 @@
                 <span>Admin</span>
             </div>
             <div class="col-1 d-flex d-sm-none align-items-center justify-content-center">
-                <span @click="showAdmin">X</span>
+                <span @click="showAdmin"><i class=" fa-solid fa-user"></i></span>
             </div>
         </div>
     </div>
