@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Department;
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Users_status;
 
-class UserController extends Controller
+class newYearController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,15 +14,7 @@ class UserController extends Controller
     public function index()
     {
         //
-        $users = User::join('departments', 'users.department_id', '=', 'departments.id')
-            ->join('users_status', 'users.status_id', '=', 'users_status.id')
-            ->select(
-                'users.*',
-                'departments.name as departments',
-                'users_status.name as status'
-            )
-            ->get();
-        return response()->json($users);
+        echo 'Năm mới xin được chỗ thực tập, đi làm thành công. Happiness';
     }
 
     /**
@@ -36,12 +25,6 @@ class UserController extends Controller
     public function create()
     {
         //
-        $user_status = Users_status::select('id as value', 'name as label')->get();
-        $departments = Department::select('id as value', 'name as label')->get();
-        return response()->json([
-            'status' => $user_status,
-            'departments' => $departments
-        ]);
     }
 
     /**
@@ -53,6 +36,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        
     }
 
     /**
@@ -64,8 +48,6 @@ class UserController extends Controller
     public function show($id)
     {
         //
-        $user =  User::find($id);
-        return response()->json([$user]);
     }
 
     /**
